@@ -1,0 +1,93 @@
+# Exercise 4
+
+Downloaded the Social Register files from [HathiTrust](https://catalog.hathitrust.org/Record/100227838?type%5B%5D=title&lookfor%5B%5D=social%20register&ft=ft)
+<br>
+1. Sample of social_register_1918
+<br>
+```
+1188
+E 154
+D:
+ilatory
+omiciles
+56
+1918
+Contains all information received after June 1.
+Copyright 1918 by the Social Register Association.
+CONSULT THIS FIRST.
+Adams N' Ambrose R... Died at 375 Park Av Jun 9-Noork
+Adams M** Elbridge L (Strong-Margaret Hubbard). ...
+absent
+M** Rob’t M Hubbard (Mary A de Veau)..
+Adams I' Elbridge L.
+Williamstown
+Adams Miss Emily B..
+Mass-Nork
+Adams M' Elbridge 2d-USA.AmC.AEF..
+Adams N" Fred'k Thompson (Maud Witherbee)
+"King's X" Del Mar Cal-Nowork
+Adams N" Geo W (Elizabeth De Wolf Andrews)
+Died at Bristol R I Jun 5-Pand
+Adams Ensign&N** Wm H (Mary C Miner) USN.
+Nantucket Mass-Noork
+Agate M&M" Fred'c J (Helen W Smith)
+Norfolk Ct. N' care Red Cross Amb Milan Italy-Nestek
+Alexander Miss Helen G(HyM).. Married at St Thomas's Chant
+Rhinelander Lt Philip Kip-USA. (Philip)... Jun 18-Neck
+Anderson N' Chas Armstrong Jr (Chas A) USA......Married
+Rolfe Niss Florence A..
+Jun 20-Purgh
+Anderson Lt&N**ChasArmstrong Jr(FlorenceARolfe) USA.OD.
+The Lenox Phia – Pátirgh
+Anderton 1" Wm B (Elizabeth S Palmer) Php 361. . Post House
+Anderton Miss Dorothy & Jhors Miss Ruth..... | Ridgefield Ct-N**
+Arents 1" George (Annie Walter)
+Southampton L I-Nirk
+Armstrong MEN" J Sinclair (Lizzie H Welsh)..
+Phone 369
+Armstrong Miss Elizabeth Howard ..
+York Harbor
+Armstrong Lt Wm C-USA.FA.AEF
+Me-Nork
+Armstrong Sergt Geo Alex-USA FA
+954
+York
+```
+<br>
+2. Cleaned social_register_1918 with Regular Expression deleting line breaks where not useful. Used ([a-z]) ?\n(?=[a-z]) to find them and $1(space) to replace it. The objective is to create a list of names as close as possible to a modern address record.
+<br>
+```
+1188
+E 154
+D:
+ilatory omiciles
+56
+1918
+Contains all information received after June 1.
+Copyright 1918 by the Social Register Association.
+CONSULT THIS FIRST.
+Adams N' Ambrose R... Died at 375 Park Av Jun 9-Noork Adams M** Elbridge L (Strong-Margaret Hubbard). ...
+absent M** Rob’t M Hubbard (Mary A de Veau)..
+Adams I' Elbridge L.
+Williamstown Adams Miss Emily B..
+Mass-Nork Adams M' Elbridge 2d-USA.AmC.AEF..
+Adams N" Fred'k Thompson (Maud Witherbee)
+"King's X" Del Mar Cal-Nowork Adams N" Geo W (Elizabeth De Wolf Andrews)
+Died at Bristol R I Jun 5-Pand Adams Ensign&N** Wm H (Mary C Miner) USN.
+Nantucket Mass-Noork Agate M&M" Fred'c J (Helen W Smith)
+Norfolk Ct. N' care Red Cross Amb Milan Italy-Nestek Alexander Miss Helen G(HyM).. Married at St Thomas's Chant Rhinelander Lt Philip Kip-USA. (Philip)... Jun 18-Neck Anderson N' Chas Armstrong Jr (Chas A) USA......Married Rolfe Niss Florence A..
+Jun 20-Purgh Anderson Lt&N**ChasArmstrong Jr(FlorenceARolfe) USA.OD.
+The Lenox Phia – Pátirgh Anderton 1" Wm B (Elizabeth S Palmer) Php 361. . Post House Anderton Miss Dorothy & Jhors Miss Ruth..... | Ridgefield Ct-N**
+Arents 1" George (Annie Walter)
+Southampton L I-Nirk Armstrong MEN" J Sinclair (Lizzie H Welsh)..
+Phone 369
+Armstrong Miss Elizabeth Howard ..
+York Harbor Armstrong Lt Wm C-USA.FA.AEF Me-Nork Armstrong Sergt Geo Alex-USA FA
+954
+York
+```
+The text presents also a <0x0c> expression which I tried to clean but I found it quite hard, mostly because the RegEx was not finding it automatically
+Due to the highly irregularities in the text the refining process may take some extra manual cleaning. The initial stage of cleaning took around 4-5 hours due to inexperience and multiple experiments with RegEx.
+
+
+
