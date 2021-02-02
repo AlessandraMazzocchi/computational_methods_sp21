@@ -19,4 +19,4 @@ My goal for this material would be to compare the different years, especially 19
 <br>
 1. 1/23/2021: Isolated the two .txt files on GitHub for research purposes (2hrs.)
 <br>
-2. 1/25/2021: Starting to clean the Social Register, Summer 1918 (...) </p>
+2. 2/1/2021: Starting to clean the Social Register, Summer 1918 (5 hrs.) </p>
