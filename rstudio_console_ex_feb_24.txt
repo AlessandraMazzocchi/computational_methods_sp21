@@ -1,0 +1,47 @@
+> ptib <- as_tibble(p)
+> ptib
+# A tibble: 55 x 1
+   `Column 1`                                            
+   <chr>                                                 
+ 1 1918                                                  
+ 2 Dilatory Domiciles                                    
+ 3 1918                                                  
+ 4 Contains all information received after June 1.       
+ 5 Copyright 1918 by the Social Register Association.    
+ 6 CONSULT THIS FIRST.                                   
+ 7 Adams N' Ambrose R, Died at 375 Park Av Jun 9-Noor    
+ 8 Adams M** Elbridge L (Strong-Margaret Hubbard), absent
+ 9 M** Rob’t M Hubbard (Mary A de Veau)..                
+10 Adams I' Elbridge L., Williamstown                    
+# ... with 45 more rows
+> p <- ggplot(data = "ptib", mapping = aes (x = x, y = y))
+Error: `data` must be a data frame, or other object coercible by `fortify()`, not a character vector
+Run `rlang::last_error()` to see where the error occurred.
+> read_csv("social_register_1918_sample_txt.csv")
+Error: 'social_register_1918_sample_txt.csv' does not exist in current working directory ('C:/Users/Alessandra Mazzocchi/Documents/FSU/MA DH/Spring 2021/comp_methods/comp_methods').
+> read_csv("data.csv")
+Error: 'data.csv' does not exist in current working directory ('C:/Users/Alessandra Mazzocchi/Documents/FSU/MA DH/Spring 2021/comp_methods/comp_methods').
+> read_csv("social_register_1918_sample-txt.csv")
+
+-- Column specification ----------------------------------------------------------------------------------------------------------
+cols(
+  `Column 1` = col_character()
+)
+
+# A tibble: 55 x 1
+   `Column 1`                                            
+   <chr>                                                 
+ 1 1918                                                  
+ 2 Dilatory Domiciles                                    
+ 3 1918                                                  
+ 4 Contains all information received after June 1.       
+ 5 Copyright 1918 by the Social Register Association.    
+ 6 CONSULT THIS FIRST.                                   
+ 7 Adams N' Ambrose R, Died at 375 Park Av Jun 9-Noor    
+ 8 Adams M** Elbridge L (Strong-Margaret Hubbard), absent
+ 9 M** Rob’t M Hubbard (Mary A de Veau)..                
+10 Adams I' Elbridge L., Williamstown                    
+# ... with 45 more rows
+> p <- ggplot(data = "ptib", mapping = aes (x = x, y = y))
+Error: `data` must be a data frame, or other object coercible by `fortify()`, not a character vector
+Run `rlang::last_error()` to see where the error occurred.
