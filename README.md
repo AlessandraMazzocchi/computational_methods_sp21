@@ -29,4 +29,4 @@ My goal for this material would be to compare the different years, especially 19
 <br>
 6. 2/30/2021: Created the first shell of my website and stored locally for the moment. Currently the effort is concentrated in learning how to model it and make it work both for desktop, and mobile - also for future projects, not related to my current academic work.
 <br>
-7. 3/9/2021: ... </p>
+7. 3/9/2021: On Sunday, I created two .png files from Voyant, one from 1918 .txt and the other from 1919 .txt. They will serve as ideal starting point to create the following steps of this week's homework. (30 min.) </p>
